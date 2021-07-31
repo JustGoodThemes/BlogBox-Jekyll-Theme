@@ -1,0 +1,23 @@
+{% for post in paginator.posts %}
+<article class="post">
+    {% if post.featured_image %}
+    <a href="{{ site.baseurl }}{{ post.url }}" class="post-thumbnail"><img src="{{ "/images/posts/" | append: post.featured_image | prepend: site.baseurl }}" alt="{% if post.featured_image_alt %}{{ post.featured_image_alt }}{% else %}{{ post.title }}{% endif %}"></a>
+    {% endif %}
+    <div class="entry-box">
+        <header class="entry-header">
+            <h2 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{ post.title }}</a></h2>
+            <div class="entry-meta">
+                <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time> by {{ site.author_name }}
+            </div><!-- .entry-meta -->
+        </header><!-- .entry-header -->
+        <div class="entry-content">
+            {% if post.content contains '<!--more-->' %}
+                {{ post.content | split:'<!--more-->' | first }}
+                <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read More</a></p>
+            {% else %}
+                {{ post.content }}
+            {% endif %}
+        </div><!-- .entry-content -->
+    </div><!-- .entry-box -->
+</article><!-- .post -->
+{% endfor %}

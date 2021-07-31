@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<main class="content fade-in-down delay-0_75s">
+    <div class="inner">
+        <article class="post">
+            {% if page.featured_image %}
+            <div class="post-thumbnail"><img src="{{ "/images/" | append: page.featured_image | prepend: site.baseurl }}" alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}" /></div>
+            {% endif %}
+            <div class="entry-box">
+                <header class="entry-header">
+                    <h1 class="entry-title">{{ page.title }}</h1>
+                </header><!-- .entry-header -->
+                <div class="entry-content">
+                    {{content}}
+                </div><!-- .entry-content -->
+            </div><!-- .entry-box -->
+        </article><!-- .post -->
+    </div><!-- .inner -->
+</main><!-- .content -->

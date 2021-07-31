@@ -1,0 +1,71 @@
+<aside class="footer-widgets">
+
+    {% if site.mailchimp_url %}
+    <div id="footer-fullwidth" class="footer-fullwidth">
+        <section class="widget widget-subscribe">
+            <div class="inner">
+                <h2 class="widget-title">{{ site.title }} Newsletter</h2>
+                <p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                    <form action="{{ site.mailchimp_url }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <label for="mce-EMAIL" class="screen-reader-text">Email Address</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </form>
+                </div>
+                <!--End mc_embed_signup-->
+            </div><!-- .inner -->
+        </section><!-- .widget -->
+    </div><!-- .footer-fullwidth -->
+    {% endif %}
+
+    <div id="footer-columns" class="footer-columns">
+        <div class="inner">
+            <div class="grid">
+
+                {% if site.author_bio and site.author_name %}
+                <div class="one-third">
+                    <section class="widget widget-text">
+                        <h2 class="widget-title">About {{ site.author_name }}</h2>
+                        <p>{{ site.author_bio }}</p>
+                    </section><!-- .widget-text -->
+                </div><!-- .one-third -->
+                {% endif %}
+
+                <div class="one-third">
+                    <section class="widget widget-recent-posts">
+                        <h2 class="widget-title">Latest Posts</h2>
+                        <ul class="recent-posts">
+                        {% for post in site.posts limit:3 %}
+                            <li>
+                                {% if post.featured_image %}
+                                <a href="{{ site.baseurl }}{{ post.url}}" class="post-thumb" style="background-image: url({{ "/images/posts/" | append: post.featured_image | prepend: site.baseurl }});"></a>
+                                {% endif %}
+                                <div class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+                                <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+                            </li>
+                        {% endfor %}
+                        </ul><!-- .recent-posts -->
+                    </section><!-- .widget-recent-posts -->
+                </div><!-- .one-third -->
+
+                <!-- Create a sorted array of tags -->
+                <div class="one-third">
+                    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+                    {% assign sortedTags = site_tags | split:',' | sort %}
+                    <section class="widget widget-tags">
+                        <h2 class="widget-title">Tags</h2>
+                        <div class="tagcloud">
+                            {% for tag in sortedTags %}
+                            <a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}">{{ tag }}</a>
+                            {% endfor %}
+                        </div><!-- .tagcloud -->
+                    </section><!-- .widget -->
+                </div><!-- .one-third -->
+
+            </div><!-- .grid -->
+        </div><!-- .inner -->
+    </div><!-- .footer-columns -->
+
+</aside><!-- .footer-widgets -->

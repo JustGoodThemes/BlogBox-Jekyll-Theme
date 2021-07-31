@@ -1,0 +1,104 @@
+/**
+ * Font Awesome Icons by Dave Gandy, http://fontawesome.io
+ * ----------------------------------------
+ */
+@font-face {
+    font-family: 'fontawesome';
+    src:  url('../fonts/fontawesome.eot?w1gi2x');
+    src:  url('../fonts/fontawesome.eot?w1gi2x#iefix') format('embedded-opentype'),
+        url('../fonts/fontawesome.ttf?w1gi2x') format('truetype'),
+        url('../fonts/fontawesome.woff?w1gi2x') format('woff'),
+        url('../fonts/fontawesome.svg?w1gi2x#fontawesome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="fa-"],
+[class*=" fa-"],
+.post.featured:before {
+    font-family: 'fontawesome' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-search:before {
+    content: "\f002";
+}
+.fa-user:before {
+    content: "\f007";
+}
+.fa-chevron-left:before {
+    content: "\f053";
+}
+.fa-chevron-right:before {
+    content: "\f054";
+}
+.fa-chevron-up:before {
+    content: "\f077";
+}
+.fa-thumb-tack:before {
+    content: "\f08d";
+}
+.fa-external-link:before {
+    content: "\f08e";
+}
+.fa-twitter:before {
+    content: "\f099";
+}
+.fa-facebook:before {
+    content: "\f09a";
+}
+.fa-github:before {
+    content: "\f09b";
+}
+.fa-feed:before {
+    content: "\f09e";
+}
+.fa-rss:before {
+    content: "\f09e";
+}
+.fa-pinterest:before {
+    content: "\f0d2";
+}
+.fa-google-plus:before {
+    content: "\f0d5";
+}
+.fa-envelope:before {
+    content: "\f0e0";
+}
+.fa-linkedin:before {
+    content: "\f0e1";
+}
+.fa-youtube-play:before {
+    content: "\f16a";
+}
+.fa-instagram:before {
+    content: "\f16d";
+}
+.fa-flickr:before {
+    content: "\f16e";
+}
+.fa-dribbble:before {
+    content: "\f17d";
+}
+.fa-vine:before {
+    content: "\f1ca";
+}
+.fa-codepen:before {
+    content: "\f1cb";
+}
+.fa-medium:before {
+    content: "\f23a";
+}
+.fa-500px:before {
+    content: "\f26e";
+}
+.fa-vimeo:before {
+    content: "\f27d";
+}

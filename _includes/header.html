@@ -1,0 +1,30 @@
+<nav class="site-nav" aria-label="Main Menu">
+    <div class="inner">
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false"><span class="icon-menu" aria-hidden="true"></span> Menu</button>
+        <div id="nav-menu" class="nav-menu">
+            <ul class="menu">
+            {% for link in site.navigation %}
+                {% assign current = nil %}
+                {% if page.url == link.url %}
+                    {% assign current = 'nav-current' %}
+                {% endif %}
+                <li class="{{ current }}"><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
+            {% endfor %}
+            </ul>
+        </div><!-- .nav-menu -->
+        <a id="search-open" class="search-toggle"><i class="fa-search" aria-hidden="true"></i><span class="screen-reader-text">Search</span></a>
+    </div><!-- .inner -->
+</nav><!-- .site-nav -->
+<header class="site-header fade-in-down delay-0_5s">
+    <div class="inner">
+        {% if site.logo != null %}
+        <p class="site-logo"><a href="{{ site.baseurl }}/" rel="home"><img src="{{ site.baseurl }}/images/{{ site.logo }}" width="200" alt="{{ site.title }} logo" /></a></p>
+        <h1 class="site-title screen-reader-text"><a href="{{ site.baseurl }}/" rel="home">{{site.title}}</a></h1>
+        {% else %}
+        <h1 class="site-title"><a href="{{ site.baseurl }}/" rel="home">{{site.title}}</a></h1>
+        {% endif %}
+        <p class="site-description">{{site.tagline}}</p>
+    </div><!-- .inner -->
+</header><!-- .site-header -->
+
+{% include search.html %}
