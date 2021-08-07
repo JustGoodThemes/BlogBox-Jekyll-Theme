@@ -24,6 +24,8 @@ It’s a perfect fit for artists, photographers or just creative bloggers lookin
 ## Local Installation
 > How to install and use the theme
 
+_Note: this theme cannot be installed as a gem in your Gemfile and config, therefore the only way to use this theme is to clone the entire repo and put your content in it among the styling._
+
 Install Jekyll as per [Jekyll docs](https://jekyllrb.com/docs/).
 
 Clone the repo or your fork.
@@ -37,10 +39,10 @@ $ bundle config set --local path vendor/bundle
 $ bundle install
 ```
 
-Start a dev server:
+Start a dev server, with verbose error traces:
 
 ```sh
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --trace
 ```
 
 ## Development
