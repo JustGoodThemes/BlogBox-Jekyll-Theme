@@ -66,9 +66,9 @@ This theme is prepared to be hosted on [Netlify](https://www.netlify.com/). All 
 
 If you want to host your site on Amazon S3, you can do so by using the [s3_website application](https://github.com/laurilehmijoki/s3_website). It will push your site to Amazon S3, where it can be served like any web server, dynamically scaling to almost unlimited traffic. Well, S3 itself is not built for speed so you probably want to put some CDN like CloudFront on top of your S3 objects.
 
-### GitHub Actions
+### GitHub Pages
 
-See the [GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) deploy guide on Jekyll docs.
+See the [GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/) deploy guide on Jekyll docs to build with GitHub Actions and host with GitHub Pages.
 
 ## License
 
