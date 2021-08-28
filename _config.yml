@@ -6,25 +6,26 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site title
-title: "BlogBox"
+title: BlogBox
+
+# Below the site title
+tagline: Tales of a digital nomad.
 
 # Site logo
 logo:
 
 # A description of your site for social meta tag, search engines, and feed.xml
-description: "BlogBox is a bold theme for the Jekyll blogging platform. Available for purchase at ThemeForest.net."
+description: |
+  BlogBox is a bold theme for the Jekyll blogging platform. Available for purchase at ThemeForest.net.
 
-# Tagline below the site title
-tagline: "Tales of a digital nomad."
+# The base hostname & protocol of your site for where absolute urls are needed
+url: https://blogbox.netlify.app
 
-# The subpath of your site, e.g. /blog, for generating urls
+# The subpath of your site, if you want to host your path on a subpath like on GitHub Pages. e.g. /blog
 baseurl:
 
 sass:
   sass_dir: _sass
-
-# The base hostname & protocol of your site for where absolute urls are needed
-url: "https://justgoodthemes.com"
 
 # Site navigation - each item must have a title and a url.
 navigation:
@@ -45,8 +46,8 @@ author_location: "Vilnius, Lithuania"
 author_image: authorimage.jpg
 
 # Footer ad banner
-banner_url: "https://justgoodthemes.com/"
 banner_image: banner.jpg
+banner_url: https://justgoodthemes.com/
 
 # Footer newsletter widget - add your form action url for MailChimp signup form here
 mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
