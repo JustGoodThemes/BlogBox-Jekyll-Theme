@@ -3,11 +3,11 @@
 
 It’s a perfect fit for artists, photographers or just creative bloggers looking for a theme with bold design.
 
-<div align="center">
-
 [Live Demo](https://blogbox.netlify.app/)
 
-</div>
+## Preview
+
+[![Blogbox preview](/blogbox_preview.jpeg "Blogbox preview")](https://blogbox.netlify.app/)
 
 ## Theme features
 
