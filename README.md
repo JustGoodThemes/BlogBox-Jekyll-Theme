@@ -1,7 +1,5 @@
 # BlogBox
-> A minimal, bold, responsive and easy-to-use theme for Jekyll
-
-It’s a perfect fit for artists, photographers or just creative bloggers looking for a theme with bold design.
+BlogBox is a minimal, bold, responsive, and easy-to-use Jekyll theme. It’s a perfect fit for artists, photographers, or creative bloggers looking for a bold design theme.
 
 [Live Demo](https://blogbox.netlify.app/)
 
