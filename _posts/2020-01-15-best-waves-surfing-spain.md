@@ -5,6 +5,33 @@ date:   2020-01-15
 featured_image: surfing.jpg
 tags: [Tips, Surfing, Travel]
 ---
+kwa kutumia tag za **template** ya **Django**  tuna taka kutenge ne zewa  `url` hasa ukizinga tia **Django** anatarajia **URL** kwenye `blog/urls.py` ambayo **inaitwa** **"name"** = `post_detail` ndiyo maana hapo kati sikuacha kuioyesha `post_detail`  namalizia na `pk=post.pk` **funguo yamsingi** nilisha izungumzia wakati tuna tengeneza **muonekano** siyo kazi kujua kwanini nime iweka hapo 
+```html
+<div class="row">
+{% for post in posts %}
+
+   <div class="col-md-4">
+        <div class="card mb-2">
+
+            <img class="card-img-top" src="{{ post.cover.url}}" class="img-fluid img-thumbnail" alt="{{ post.title }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.text | slice:":40" }}</p>
+
+                <a href="{% url 'post_detail' pk=post.pk %}" 
+                   class="btn btn-success">
+                    Soma zaidi
+                </a>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+``` 
+**post_detail.html** 
+
 
 **Surfing** is a surface water sport in which the wave rider, referred to as a surfer, rides on the forward or deep face of a moving wave, which is usually carrying the surfer towards the shore. Waves suitable for surfing are primarily found in the ocean, but can also be found in lakes or in rivers in the form of a standing wave or tidal bore. However, surfers can also utilize artificial waves such as those from boat wakes and the waves created in artificial wave pools.
 
