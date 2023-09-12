@@ -3,6 +3,10 @@ BlogBox is a minimal, bold, responsive, and easy-to-use Jekyll theme. It’s a p
 
 [Live Demo](https://blogbox.netlify.app/)
 
+# Premium Jekyll Themes
+
+You can find our premium Jekyll themes here -> [jekyllthemes.io](https://jekyllthemes.io/developers/just-good-themes)
+
 ## Preview
 
 [![Blogbox preview](/blogbox_preview.jpeg "Blogbox preview")](https://blogbox.netlify.app/)
